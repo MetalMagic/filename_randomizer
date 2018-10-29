@@ -3,13 +3,11 @@ import os
 import sys
 
 print("WARNING: This program randomizes all of the filenames in a directory.",
-      "\nIf you use this in the wrong directory you could mess something up.",
-      "\nI take no responsibilities so use this program at your own risk.")
+      "\nIf you use this in the wrong directory you could mess something up.")
 
 print("\n*Note* This program cannot properly identify all file extensions with multiple '.' characters.",
       "\nTherefore any filenames with multiple '.' characters will not be randomized.\n")
 
-      
 characters = [] #list of characters we'll use to randomize the filenames
 
 #add lowercase alphabet a-z to the characters list
@@ -25,7 +23,7 @@ for i in range(65,91):
     characters.append(chr(i))
     
     
-#randomFilename receives a list of characters as a parameter and creates
+#randomFilename receives a list of characters as a parameter and returns
 #a random string of length 30-60 using those characters
 def randomFilename(characters):
         nameSize = randint(30,60)
@@ -61,7 +59,7 @@ if request == "single": #randomize a single file
                 
                 os.rename(filename + extension, directory + "\\" + newFilename) #rename the file
     
-    input("Done ")
+    input("Done ") #do this so the console window won't close immediately
     
     
 elif request == "directory":    
@@ -90,6 +88,6 @@ elif request == "directory":
                             
                     os.rename(filename + extension, directory + "\\" + newFilename) #rename the file
 
-    input("Done ")               
-            
+    input("Done ") #do this so the console window won't close immediately
+
             
