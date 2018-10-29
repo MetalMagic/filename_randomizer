@@ -1,6 +1,5 @@
 from random import randint
 import os
-import sys
 
 print("WARNING: This program randomizes all of the filenames in a directory.",
       "\nIf you use this in the wrong directory you could mess something up.")
